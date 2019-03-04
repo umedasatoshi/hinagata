@@ -9,11 +9,11 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://example.com/"
+    "@id": "https://umedasatoshi.github.io/hinagata/"
   },
-  "headline": "EXAMPLE",
+  "headline": "HINAGATA",
   "image": [
-    "https://example.com/icon512.png"
+    "https://umedasatoshi.github.io/hinagata/icon512.png"
    ],
   "datePublished": "2019-02-20T08:00:00+08:00",
   "dateModified": "2019-02-20T08:00:00+08:00",
@@ -23,23 +23,24 @@
   },
    "publisher": {
     "@type": "Organization",
-    "name": "EXAMPLE inc",
+    "name": " CUROGO",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://example.com/icon48.png"
+      "url": "https://umedasatoshi.github.io/hinagata/icon48.png"
     }
   },
-  "description": "description text."
+  "description": "HINAGATA Project's page."
 }
 </script>
-<title>title</title>
+<title> HINAGATA | WEBサイト構築を簡単にするテンプレート</title>
 <meta name="description" content="descrpition text">
-<meta name="keywords" content="keywords text">
+<meta name="keywords" content="WEB制作,ホームページ制作,HTML,Wordpress,テンプレート,テーマ">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <meta name="theme-color" content="#fff">
-<link rel="shortcut icon" href="icon48.png" />
-<link rel="canonical" href="https://example.com" />
-<link rel="amphtml" href="https://example.com">
+<link rel="shortcut icon" href="https://umedasatoshi.github.io/hinagata/icon48.png" />
+<link rel="canonical" href="https://umedasatoshi.github.io/hinagata/" />
+<link rel="amphtml" href="https://umedasatoshi.github.io/hinagata/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 <style amp-custom>
 /*!
@@ -378,7 +379,7 @@ template {
 :root {
  --var-sans-serif: 'Roboto', "游ゴシック体", 'YuGothic', "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", 'Meiryo', "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
  --var-serif:  "游明朝体", "YuMincho", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "ＭＳ 明朝", serif;
- --var-sans-alphabet: helvetica, 'arial black', arial, sans-serif;
+ --var-sans-alphabet: 'Roboto', helvetica, 'arial black', arial, sans-serif;
  --var-color-base: #211915;
  --var-color-a: #211915;
 }
@@ -408,7 +409,7 @@ body {
     font-family: var(--var-sans-serif);
     font-size: 1.4rem;
     color: var(--var-color-base);
-    letter-spacing: 0.045rem;
+    letter-spacing: 0.1rem;
     line-height: 2;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -440,6 +441,102 @@ dl {
     margin: 0;
 }
 
+.h2wrap {
+	display: flex;
+	justify-content: center;
+}
+
+/*
+ *
+ * Header
+ *
+ ****************/
+#header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	width: 100%;
+}
+
+#header h1 {
+	font-size: 2.4rem;
+	letter-spacing: .75rem;
+}
+
+/*
+ *
+ * Main
+ *
+ ****************/
+#main {
+	margin: 0 0 100px 0;
+}
+
+#main article {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto 100px auto;
+	padding: 0 50px;
+	
+}
+
+#main h2 {
+	position: relative;
+	margin: 0 0 50px 0;
+	padding: 0 75px;
+	font-size: 1.8rem;
+}
+
+#main h2:before,
+#main h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 1px;
+  background-color: black;
+}
+
+#main h2:before {
+  left:0;
+}
+
+#main h2:after {
+  right: 0;
+}
+
+#main .intro {
+	margin: 0 0 30px 0;
+	font-size: 2.4rem;
+	text-align: center;
+	letter-spacing: .5rem;
+}
+
+#main .intro strong {
+	font-weight: normal;
+}
+
+#main #introducing {
+}
+
+#main #projects {
+}
+
+#main #projects section {
+	margin: 0 0 50px 0;
+}
+
+/*
+ *
+ * Footer
+ *
+ ****************/
+#footer {
+	text-align: center;
+}
+
 /*
  *
  * ---
@@ -464,14 +561,34 @@ dl {
 </head>
 <body>
 <header id="header">
-	<h1>example</h1>
+	<div>
+		<h1>HINAGATA</h1>
+		<p>Files that will be a template for web production.</p>
+	</div>
 </header>
-<nav id="global-nav">
-	<ul>
-		<li tabindex on="tap:main.scrollTo" role="button" >MAIN</li>
-	</ul>
-</nav>
 <main id="main">
+	<article id="introducing">
+		<div class="h2wrap">
+			<h2>introducing HINAGATA.</h2>
+		</div>
+		<p class="intro"><strong>HINAGATAはWEB制作を始めるための<br>最小限のファイル群を想定し造られました。</strong></p>
+		<div class="txt">
+			<p>コーダーやフロントエンジニアにとって、どんなテンプレートがあればコーディングを始めやすいだろう？<br>
+				その答えの一つが、機能を削ぎ落としていきシンプルでミニマル、最小限に記述をとどめたファイル群でした。</p>
+		</div>
+	</article>
+	<article id="projects">
+		<div class="h2wrap">
+			<h2>HINAGATA projects.</h2>
+		</div>
+		<section>
+			<h3>HINAGATA for amp + pwa</h3>
+			<div class="txt">
+				てすと
+			</div>
+			<p class="btn"><a href="https://github.com/umedasatoshi/hinagata.html_amp-pwa">Download</a></p>
+		</section>
+	</article>
 </main>
 <footer id="footer"><small>&copy; example.com</small></footer>
 <amp-install-serviceworker
