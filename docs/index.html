@@ -441,9 +441,29 @@ dl {
     margin: 0;
 }
 
+@media print, screen and (min-width: 768px) {
+    .br-pc {
+        display: block;
+        height: 0;
+        width: 0;
+    }
+}
+
 .h2wrap {
 	display: flex;
 	justify-content: center;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+    
+@media print, screen and (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
 }
 
 /*
@@ -457,11 +477,24 @@ dl {
 	align-items: center;
 	height: 500px;
 	width: 100%;
+    margin: 0 0 100px 0;
+    background: url("img/bg_hiyoko.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 #header h1 {
 	font-size: 2.4rem;
 	letter-spacing: .75rem;
+}
+
+#header h1 + p {
+    font-size: 1rem;
+}
+
+@media print, screen and (min-width: 768px) {
+    #header h1 + p {
+        font-size: 1.4rem;
+    }
 }
 
 /*
@@ -486,6 +519,7 @@ dl {
 	margin: 0 0 50px 0;
 	padding: 0 75px;
 	font-size: 1.8rem;
+    text-align: center;
 }
 
 #main h2:before,
@@ -510,8 +544,13 @@ dl {
 #main .intro {
 	margin: 0 0 30px 0;
 	font-size: 2.4rem;
-	text-align: center;
 	letter-spacing: .5rem;
+}
+
+@media print, screen and (min-width: 768px) {
+    #main .intro {
+        text-align: center;
+    }
 }
 
 #main .intro strong {
@@ -528,12 +567,67 @@ dl {
 	margin: 0 0 50px 0;
 }
 
+#main #projects section h3 {
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+@media print, screen and (min-width: 768px) {
+    #main #projects section h3 {
+        text-align: left;
+    }
+}
+
+#main #projects section .txt {
+    order: 2;
+}
+
+@media print, screen and (min-width: 768px) {
+    #main #projects section .txt {
+        order: 1;
+    }
+}
+
+#main #projects section figure {
+    order: 1;
+}
+
+@media print, screen and (min-width: 768px) {
+    #main #projects section figure {
+        order: 2;
+    }
+}
+
+#main #projects section .txt .btn a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto 0 auto;
+    padding: 5px;
+    border: 1px solid var(--var-color-a);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#main #projects section figure {
+    margin: 0;
+}
+
+#main #projects section figure amp-img {
+    max-width: 144px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
 /*
  *
  * Footer
  *
  ****************/
 #footer {
+    padding: 20px 0;
 	text-align: center;
 }
 
@@ -571,26 +665,40 @@ dl {
 		<div class="h2wrap">
 			<h2>introducing HINAGATA.</h2>
 		</div>
-		<p class="intro"><strong>HINAGATAはWEB制作を始めるための<br>シンプルでオーソドックスなファイル群です。</strong></p>
-		<div class="txt">
-			<p>コーダーやフロントエンジニアにとって、どんなテンプレートがあればコーディングを始めやすいだろう？<br>
-				その答えの一つが、機能を削ぎ落としていきシンプルで、かつオーソドックスな構成のファイル群でした。</p>
-		</div>
+		<p class="intro"><strong>HINAGATAはWEB制作を始めるための<span class="br-pc"></span>シンプルでオーソドックスなファイル群です。</strong></p>
+        <div class="txt">
+    		<p>コーダーやフロントエンジニアにとって、どんなテンプレートがあればコーディングを始めやすいだろう？<br>
+          		その答えの一つが、機能を削ぎ落としていきシンプルで、かつオーソドックスな構成のファイル群でした。</p>
+        </div>
 	</article>
 	<article id="projects">
 		<div class="h2wrap">
 			<h2>HINAGATA projects.</h2>
 		</div>
 		<section>
+			<h3>HINAGATA for Wordpress</h3>
+            <div class="grid-2">
+			    <div class="txt">
+    				<p>HINAGATA for Wordpressは使用頻度の高いファイルだけで構成されたテンプレートです。<br>
+                        便利な固有機能はなく、また複雑なコードもありません。構築しやすいスタンダードなテンプレートです。</p>
+		    	    <p class="btn"><a href="https://github.com/umedasatoshi/hinagata.wordpress">Download</a></p>
+    			</div>
+                <figure><amp-img src="img/logo_wordpress.png" width="144" height="144" alt="Wordpress" layout="responsive" /></figure>
+            </div>
+		</section>
+		<section>
 			<h3>HINAGATA for amp + pwa</h3>
-			<div class="txt">
-				てすと
+            <div class="grid-2">
+			    <div class="txt">
+			    	<p>HINAGATA for amp + pwaはAMPとPWA（プログレッシブウェブアプリ）の設定ファイルが予め同梱されたボイルプレートです。</p>
+    		    	<p class="btn"><a href="https://github.com/umedasatoshi/hinagata.html_amp-pwa">Download</a></p>
+			    </div>
+                <figure><amp-img src="img/logo_amp.png" width="144" height="144" alt="AMP" layout="responsive" /></figure>
 			</div>
-			<p class="btn"><a href="https://github.com/umedasatoshi/hinagata.html_amp-pwa">Download</a></p>
 		</section>
 	</article>
 </main>
-<footer id="footer"><small>&copy; example.com</small></footer>
+<footer id="footer"><small>&copy; HINAGATA</small></footer>
 <amp-install-serviceworker
       src="https://example.com/serviceworker.js"
       layout="nodisplay">
