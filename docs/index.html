@@ -475,11 +475,17 @@ dl {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 500px;
+	height: 100vh;
 	width: 100%;
     margin: 0 0 100px 0;
     background: url("img/bg_hiyoko.jpg") no-repeat center center;
     background-size: cover;
+}
+
+@media print, screen and (min-width: 768px) {
+    #header {
+        height: 500px;
+    }
 }
 
 #header h1 {
