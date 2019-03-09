@@ -4,6 +4,9 @@ var urlsToCache = [
     '/index.html',
     '/manifest.json',
     '/serviceworker.js'
+    '/img/bg_hiyoko.jpg',
+    '/img/logo_amp.png',
+    '/img/logo_wordpress.png',
 ];
 
 // インストール処理
