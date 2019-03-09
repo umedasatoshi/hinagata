@@ -441,6 +441,18 @@ dl {
     margin: 0;
 }
 
+.br-sp {
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+@media print, screen and (min-width: 768px) {
+    .br-sp {
+        display: none;
+    }
+}
+
 @media print, screen and (min-width: 768px) {
     .br-pc {
         display: block;
@@ -688,7 +700,7 @@ dl {
 			<h3>HINAGATA for Wordpress</h3>
             <div class="grid-2">
 			    <div class="txt">
-    				<p>HINAGATA for Wordpressは使用頻度の高いファイルだけで構成されたテンプレートです。<br>
+    				<p>HINAGATA <span class="br-sp"></span>for Wordpressは使用頻度の高いファイルだけで構成されたテンプレートです。<br>
                         便利な固有機能はなく、また複雑なコードもありません。構築しやすいスタンダードなテンプレートです。</p>
 		    	    <p class="btn"><a href="https://github.com/umedasatoshi/hinagata.wordpress">Download</a></p>
     			</div>
@@ -696,7 +708,7 @@ dl {
             </div>
 		</section>
 		<section>
-			<h3>HINAGATA for amp + pwa</h3>
+            <h3>HINAGATA <span class="br-sp"></span>for amp + pwa</h3>
             <div class="grid-2">
 			    <div class="txt">
 			    	<p>HINAGATA for amp + pwaはAMPとPWA（プログレッシブウェブアプリ）の設定ファイルが予め同梱されたボイルプレートです。</p>
