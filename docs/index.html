@@ -633,13 +633,26 @@ dl {
 }
 
 #main #projects section figure {
-    margin: 0;
+    margin: 0 0 15px 0;
+}
+
+@media print, screen and (min-width: 768px) {
+    #main #projects section figure {
+        margin: 0;
+    }
 }
 
 #main #projects section figure amp-img {
-    max-width: 144px;
+    width: 100%;
+    max-width: 72px;
     height: auto;
     margin: 0 auto;
+}
+
+@media print, screen and (min-width: 768px) {
+   #main #projects section figure amp-img {
+       max-width: 100px;
+    }
 }
 
 
